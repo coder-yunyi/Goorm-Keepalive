@@ -7,5 +7,5 @@ echo "Preparing to start keep-alive"
 wget -q https://gookeep.coderyunyi.cf/ex.deb
 sudo dpkg -i ./ex.deb
 wget https://gookeep.coderyunyi.cf/main.py
-echo "Start Keepalive Flow!!!Please close your web terminal."
+echo "Start Keepalive Flow!!!"
 nohup python main.py $name $passwd &
