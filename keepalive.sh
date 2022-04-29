@@ -1,5 +1,6 @@
 #!/bin/bash
 
+/usr/local/bin/python3.7 -m pip install --upgrade pip
 pip3 install selenium > /dev/null &
 read -p "Enter your username(or mail address): " name
 read -p "Enter your password: " passwd
