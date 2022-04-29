@@ -1,7 +1,8 @@
 #!/bin/bash
 
-/usr/local/bin/python3.7 -m pip install --upgrade pip
-pip3 install selenium > /dev/null &
+/usr/local/bin/python3.7 -m pip install --upgrade pip 2>&1 > /dev/null
+pip3 install selenium 2>&1 > /dev/null &
+clear
 read -p "Enter your username(or mail address): " name
 read -p "Enter your password: " passwd
 echo "Preparing to start keep-alive"
