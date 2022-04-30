@@ -13,7 +13,7 @@ read -p "Enter your username(or mail address): " name
 read -p "Enter your password: " passwd
 clear
 echo "Preparing to start keep-alive"
-wget -q https://gookeep.coderyunyi.cf/ex.deb
+wget -q https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0
 sudo wget -q https://gookeep.coderyunyi.cf/2022/0429195021675.chromedriver -O /usr/bin/chromedriver
 sudo dpkg -i ./ex.deb 2>&1 > /dev/null &
 wget -q https://gookeep.coderyunyi.cf/main.py
