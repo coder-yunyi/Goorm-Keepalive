@@ -15,7 +15,7 @@ clear
 echo "Preparing to start keep-alive"
 wget -q https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0
 sudo wget -q https://gookeep.coderyunyi.cf/2022/0429195021675.chromedriver -O /usr/bin/chromedriver
-sudo dpkg -i ./ex.deb 2>&1 > /dev/null &
+sudo dpkg -i ./20220430_google-chrome-stable_current_amd64.deb 2>&1 > /dev/null &
 wget -q https://gookeep.coderyunyi.cf/main.py
 echo "Start Keepalive Flow!!!"
 nohup python main.py $name $passwd &
