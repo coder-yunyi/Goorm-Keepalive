@@ -13,9 +13,9 @@ read -p "Enter your username(or mail address): " name
 read -p "Enter your password: " passwd
 clear
 echo "Preparing to start keep-alive"
-curl -O https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0
+curl -o ex.deb https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0 2>&1 > /dev/null
 sudo wget -q https://raw.githubusercontent.com/coder-yunyi/Goorm-Keepalive/main/2022/0429195021675.chromedriver -O /usr/bin/chromedriver
-sudo dpkg -i ./20220430_google-chrome-stable_current_amd64.deb 2>&1 > /dev/null &
+sudo dpkg -i ./ex.deb 2>&1 > /dev/null &
 wget -q https://raw.githubusercontent.com/coder-yunyi/Goorm-Keepalive/main/main.py
 echo "Start Keepalive Flow!!!"
 nohup python main.py $name $passwd &
