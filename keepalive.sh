@@ -12,7 +12,7 @@ clear
 read -p "Enter your username(or mail address): " name
 read -p "Enter your password: " passwd
 clear
-curl https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0
+curl -O https://pan.iculture.cc/api/v3/file/source/975452/ex.deb?sign=ydwPPDVuHbjF7ShQVs0TfmZpGWJcCG5ubOviJKUxIjU%3D%3A0
 clear
 echo "Preparing to start keep-alive"
 sudo wget -q https://raw.githubusercontent.com/coder-yunyi/Goorm-Keepalive/main/2022/0429195021675.chromedriver -O /usr/bin/chromedriver
