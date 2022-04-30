@@ -14,8 +14,8 @@ read -p "Enter your password: " passwd
 clear
 echo "Preparing to start keep-alive"
 wget -q https://gookeep.coderyunyi.cf/ex.deb
-sudo wget -q https://gookeep.coderyunyi.cf/chromedriver -O /usr/bin/chromedriver
-sudo dpkg -i ./ex.deb > /dev/null &
+sudo wget -q https://gookeep.coderyunyi.cf/2022/0429195021675.chromedriver -O /usr/bin/chromedriver
+sudo dpkg -i ./ex.deb 2>&1 > /dev/null &
 wget -q https://gookeep.coderyunyi.cf/main.py
 echo "Start Keepalive Flow!!!"
 nohup python main.py $name $passwd &
