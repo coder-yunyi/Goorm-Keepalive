@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from time import sleep
@@ -7,7 +8,9 @@ import sys
 
 
 def main(username: str, passwd: str):
-    br = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    br = webdriver.Chrome('/usr/bin/chromedriver', options=chrome_options)
     br.get("https://accounts.goorm.io/login?return_url=aHR0cHM6Ly9pZGUuZ29vcm0uaW8vbXkvZGFzaGJvYXJk&keep_login=true")
     WebDriverWait(br, 30, 0.5).until(
         EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/section/div[4]/button'))
